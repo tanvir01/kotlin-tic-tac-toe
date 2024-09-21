@@ -67,7 +67,7 @@ class Game (val player1: Player, val player2: Player) {
         val cells = board.getCells()
 
         // check if player won
-        for (combination in winningCombinations) {
+        winningCombinations.forEach { combination ->
             val (a, b, c) = combination
             if (cells[a] == player.symbol && cells[b] == player.symbol && cells[c] == player.symbol) {
                 return true
