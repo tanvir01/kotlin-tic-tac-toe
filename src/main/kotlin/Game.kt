@@ -16,6 +16,10 @@ class Game (val player1: Player, val player2: Player) {
         listOf(2, 4, 6)
     )
 
+    fun getBoard(): Board {
+        return board
+    }
+
     fun startGame() {
         board.printCurrentBoardState()
         while (true) {
@@ -55,7 +59,7 @@ class Game (val player1: Player, val player2: Player) {
         return isEnded
     }
 
-    private fun checkIfPlayerWon(player: Player): Boolean {
+    fun checkIfPlayerWon(player: Player): Boolean {
         val moves = player.moves
         if (moves.size < 3) {
             return false
