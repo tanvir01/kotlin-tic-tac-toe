@@ -47,8 +47,6 @@ class Game (val player1: Player, val player2: Player) {
                     break
                 }
                 board.printCurrentBoardState()
-            } else {
-                continue
             }
         }
     }
